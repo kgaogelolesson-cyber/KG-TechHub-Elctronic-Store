@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquire</title>
+</head>
+<body>
+    <section>
+        <header>
+    <!--The logo-->
+            <div>
+                <img src="Assets/images/logo.jpeg" height="100" width="100" alt="Logo">
+            </div>
+    <!--The Navigation-->
+            <div>
+                <nav class="my nav bar">
+                    <a href="index.html" target="_blank"> Home</a>
+                    <a href="products.html" target="_blank">Products</a>
+                    <a href="about.html" target="_blank">About us</a>
+                    <a href="order.html" target="_blank">Place an order</a>
+                    <a href="enquiry.html">Enquire</a>
+                </nav> <hr>
+            </div>
+    <!--This is the Enquiry Head-->
+            <div>
+                <h2 class="the main header">“Don't hesitate to reach out! Fill in your details and message below, and we'll help you find the right product or answer your questions.”</h2>
+            </div> <hr>
+        </header>
+    </section>
+<!--This is the main with a form--> 
+    <section>
+        <main>
+            <form>
+                <div class="form">
+                    <input type="text" placeholder="Name" required> <input type="text" placeholder="Surname" required>
+                    <input type="text" placeholder="Email" required> 
+                    <input type="text" placeholder="Phone Numbers" required>       
+                <br>
+                    <label for="enquiry">Type of Enquiry</label>
+                    <select required name="enquiry" id="enquiry">
+                        <option value="Product">Product Availability</option>
+                        <option value="Info">Product Enquiry</option>
+                        <option value="Support">Technical Support</option>
+                        <option value="Warranty">Waranty</option>
+                        <option value="Bulk">Bulk orders</option>
+                    </select>
+                    <label for="Enquriy message" >Your Enqury</label>
+                    <textarea required name="message" id="mesage"></textarea>
+                </div>
+                
+                    <div>
+                        <button class="button">Send enquiry</button>
+                    </div>
+                </div>
+                
+            </form>
+            <hr>
+            
+    <!--This are the FAQ-->
+            <div>
+                <h2 class="the head">FAQ</h2>
+            </div>
+            <div>
+                <ol>
+                    <li>Do you Deliver</li>0
+                    <li>Do you Offer Warranties</li>
+                    <li>Do you Sell Genuine Products</li>
+                </ol>
+
+                <div>
+                    <p>1.Yes, we deliver nationwide. Contact us with your location, <br>and we'll arrange fast and reliable delivery for your order.</p>
+                    <p>2.Yes, all our products come with a warranty.</p>
+                    <p>3.Yes, we guarantee that all our products are authentic and of high quality. <br> We do not sell counterfeit or refurbished items unless clearly stated.</p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!--This is the footer-->
+    <section>
+        <br>
+        <footer>
+            <p class="placed in the centre"><strong>&copy; 2026 KGs TechHub Electronics. All rights reserved</strong></p>
+        </footer>
+    </section>
+</body>
+</html>
