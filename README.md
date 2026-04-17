@@ -73,7 +73,7 @@ Duckett, J. (2011). HTML and CSS: Design and Build Websites.
 
 --How to Run the Project
 Clone the repository
-git clone https://github.com/your-username/techhub.git
+git clone (https://github.com/kgaogelolesson-cyber/KG-TechHub-Elctronic-Store.git)
 Open the folder in VS Code
 Open index.html in your browser
 
