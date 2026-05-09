@@ -12,9 +12,11 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: auto;
+  margin-bottom: 50px;
   margin: 0 auto;
   padding: 0 20px;
+  background: #0F172A;
 }
 
 .text-center {
@@ -22,23 +24,34 @@ body {
 }
 
 .page-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.8rem;
   color: #007BFF;
   margin: 30px 0 20px;
+  border: #1e4e75 2px solid;
+  border-color: #1e4e75;
+  border-radius: 30px;
 }
 .FAQ-Centre {
   display: flex;
-  background: #e9ecef;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
+  text-align: center;
+}
+.FAQ-Centre ol {
+  list-style: none;
+  padding-left: 0;
 
 }
 .main-header {
-  font-size: 2rem;
-  color: #273442;
-  margin: 20px 0;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Header & Navigation */
@@ -50,9 +63,11 @@ header {
   margin-bottom: 30px;
 }
 
-.logo img {
+.logo {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  object-fit: cover;
 }
 
 .navbar ul {
@@ -65,10 +80,12 @@ header {
 }
 
 .navbar a {
+  justify-content: space-evenly;
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: 500;
   padding: 10px 15px;
+  border: #0056b3 1px solid;
   border-radius: 5px;
 }
 
@@ -80,7 +97,8 @@ header {
 .button {
   background: #1a4060;
   color: white;
-  border: none;
+  margin: 20px 0;
+  border: #0056b3 1px solid;
   padding: 12px 30px;
   font-size: 1.1rem;
   border-radius: 25px;
@@ -199,13 +217,17 @@ header {
 .form {
   max-width: 600px;
   margin: 40px auto;
-  background: white;
+  background:transparent;
+  backdrop-filter: blur(10px);
+  border: 4px solid #1E293B;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   display: grid;
   gap: 10px;
 }
+
+
 
 .form-grid {
   display: grid;
