@@ -2,81 +2,134 @@ TechHub Electronic Store Website
 
 --Project Information
 
-Student Name: Kgaogelo Lesson
-Course: WEDE5020 
-Institution: Rosebank college Polokwane campus
+Project Name: TechHub Electronic Store Website  
+Student Name: Kgaogelo Lesson  
+Course: WEDE5020  
+Institution: Rosebank College Polokwane Campus  
 
 --Project Overview
 
-TechHub is a modern e-commerce website designed to showcase and sell electronic products such as smartphones, laptops, and accessories. The platform focuses on usability, responsive design, and providing a smooth browsing experience for users.
+TechHub is a modern electronic e-commerce website developed to showcase and sell electronic products such as smartphones, laptops, gaming accessories, headphones, and other tech gadgets.
 
-This project demonstrates web development fundamentals including HTML structure, layout design, and user interaction features.
+The website focuses on:
+
+Responsive design
+User-friendly navigation
+Modern UI styling
+Product showcasing
+Customer interaction features
+
+This project demonstrates practical web development skills using HTML and CSS while simulating a real-world online electronics store.
 
 --Goals and Objectives
-Build a responsive and user-friendly website
-Display electronic products clearly
-Provide a functional enquiry system
-Apply modern web design principles
-Simulate a real-world online store
+
+The goals of this project are to:
+
+Build a responsive and professional website
+Display products clearly and attractively
+Create smooth website navigation
+Apply modern CSS styling techniques
+Simulate a real-world online store experience
+Improve user interaction and accessibility
 
 --Features
-Homepage with featured products
-Product listing section
-Enquiry page with:
+
+Current Features
+
+Responsive homepage
+Navigation bar
+Featured products section
+Products page
+About Us page
+Place an Order page
+Enquiry page
 Dropdown menu
 Message input box
-Navigation bar
-Responsive design (mobile + desktop)
+Modern CSS styling
+Mobile-friendly layout
 
---Sitemap
-Home
-│--Products
-│--About us
-│--Place an order
-│--Enquire
+--Sitemap Home
+Home│--Products │--About us │--Place an order │--Enquire
 
---Timeline & Milestones
-Planning & Research
-Design Layout
-Development
-Testing
-Final Submission
+--Technologies Used
+
+HTML5 for Website structure
+CSS3  for Styling and responsiveness
 
 --Part 1 Details
 
-This phase includes:
+Included:
 
-Research and content collection
-Website planning
+Research and planning
 Basic HTML structure
-Initial layout design
+Initial website layout
+Navigation setup
 
---Part 2 & 3 will include styling (CSS), interactivity (JavaScript), and improvements.
+--Part 2 Details
+
+Included:
+
+CSS styling
+Responsive design
+UI improvements
+Layout enhancements
+Improved visual appearance
 
 --Changelog
--1st
+
+1st Update
 Initial project setup
 Created homepage
-Added navigation
--2nd
-Added,Product page and About us page
-Improved layout
--3rd
-Added, Place an order and Enquiry page
-And Improved Layout 
+Added navigation bar
+
+--2nd Update
+Added Products page
+Added About Us page
+Improved layout structure
+
+--3rd Update
+Added Place an Order page
+Added Enquiry page
+Improved page layout
+
+--4th Update
+Added CSS styling
+Improved responsiveness
+Enhanced UI design
+Added hover effects and spacing improvements
 
 --References
-Unsplash. (n.d.) Free images and photos. Available at: https://unsplash.com/images
-Canva. (n.d.) Design tools and templates. Available at: https://www.canva.com
-W3Schools. (2024). HTML Tutorial. https://www.w3schools.com
+
+Unsplash. (n.d.) Free images and photos. Available at: https://unsplash.com/images 
+Canva. (n.d.) Design tools and templates. Available at: https://www.canva.com 
+W3Schools. (2024). HTML Tutorial. https://www.w3schools.com 
 Duckett, J. (2011). HTML and CSS: Design and Build Websites.
 
 --How to Run the Project
-Clone the repository
-git clone (https://github.com/kgaogelolesson-cyber/KG-TechHub-Elctronic-Store.git)
-Open the folder in VS Code
-Open index.html in your browser
+
+Clone the Repository
+
+git clone https://github.com/kgaogelolesson-cyber/KG-TechHub-Elctronic-Store.git
+
+Open the Project
+
+1. Open the folder in VS Code
+2. Open index.html
+3. Run the website in your browser
 
 --Future Improvements
-Improve UI/UX design
-Add product filtering
+
+Future updates may include:
+
+- JavaScript interactivity
+- Product search feature
+
+Responsive Design
+
+The website is designed to work on:
+
+- Desktop devices
+- Tablets
+- Mobile phones
+
+
