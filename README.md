@@ -100,10 +100,11 @@ Added hover effects and spacing improvements
 
 --References
 
-Unsplash. (n.d.) Free images and photos. Available at: https://unsplash.com/images 
-Canva. (n.d.) Design tools and templates. Available at: https://www.canva.com 
-W3Schools. (2024). HTML Tutorial. https://www.w3schools.com 
-Duckett, J. (2011). HTML and CSS: Design and Build Websites.
+-Unsplash. (n.d.) Free images and photos. Available at: https://unsplash.com/images 
+-Canva. (n.d.) Design tools and templates. Available at: https://www.canva.com 
+-W3Schools. (2024). HTML Tutorial. https://www.w3schools.com 
+-Duckett, J. (2011). HTML and CSS: Design and Build Websites.
+-Font Awesome. (2026) Font Awesome Icons. Available at: https://fontawesome.com/ (Accessed: 13 May 2026).
 
 --How to Run the Project
 
