@@ -149,7 +149,6 @@ header {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 .product-grid > div {
   background: white;
   padding: 20px;
@@ -163,23 +162,35 @@ header {
   transform: translateY(-5px);
 }
 
-.product-grid img {
+/* Ensure product pictures fit nicely */
+.product-grid img,
+.product-grid .product {
   width: 100%;
-  height: 200px;
+  height: 190px;
   object-fit: cover;
+  object-position: center;
+  display: block;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
+/* Keep link styling consistent for cards */
 .product-grid a {
   color: #007BFF;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .product-grid a:hover {
   text-decoration: underline;
 }
+
+/* Footer text alignment class used in products.html */
+.Centre-text {
+  text-align: center;
+}
+
 
 /* Product List */
 .product-list {
@@ -188,6 +199,7 @@ header {
   border-radius: 10px;
   margin: 30px 0;
 }
+
 
 .text-on-left {
   text-align: left;
@@ -215,7 +227,7 @@ header {
 
 .product-list ul {
   list-style: none;
-  columns: 7;
+  columns: 6;
   gap: 10px;
 }
 
@@ -227,32 +239,7 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/*Product grid*/
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin: 40px 0;
-}
-
-.product-grid > div {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.product-grid a {
-  color: #134999;
-  text-decoration: none;
-  font-weight: 500;
-  border: #1e4e75 2px solid;
-  border-radius: 30px;
-  padding: 5px 10px;
-  background-color: #cbced1;
-}
+/*Product grid (removed duplicate styles to prevent overriding the main product-grid layout)*/
 
 /* Forms */
 .form {
@@ -325,11 +312,6 @@ header {
   flex-direction: row;
 }
 
-.hours-list {
-  text-align: center;
-
-}
-
 @media (max-width: 768px) {
   .horizontal-list li {
     flex: 1 1 100%;
@@ -345,7 +327,7 @@ header {
 }
 
 .warranty-list li {
-  color: #333;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -360,6 +342,7 @@ header {
   border-radius: 10px;
   margin-bottom: 30px;
 }
+
 
 /* Footer */
 footer {
