@@ -56,6 +56,15 @@ Home│--Products │--About us │--Place an order │--Enquire
 HTML5 for Website structure
 CSS3  for Styling and responsiveness
 
+--Website Preview
+
+--Different Screen Views--
+![Mobile-View](Assets/ScreenShots/Mobile%20View.webp)
+
+![DeskTop-View](Assets/ScreenShots/Desktop%20View.webp)
+
+![Tablet-View](Assets/ScreenShots/Tablet%20View.webp)
+
 --Part 1 Details
 
 Included:
