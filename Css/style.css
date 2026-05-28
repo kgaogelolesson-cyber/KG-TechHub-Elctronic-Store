@@ -98,29 +98,38 @@ header {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+@media(max-width:700px){
+  .logo{width: 90px;height: 90px;
+  }
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px 0;
 }
 
 .navbar a {
-  justify-content: space-evenly;
+  display: block;
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: 500;
   padding: 10px 15px;
   border: #0056b3 1px solid;
   border-radius: 25px;
+  transition: 0.3s ease;
 }
 
 .navbar a:hover {
   background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
 }
 
 /* Buttons */
