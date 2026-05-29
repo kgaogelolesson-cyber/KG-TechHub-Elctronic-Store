@@ -101,8 +101,7 @@ Added hover effects and spacing improvements
 --Website Preview--
 -HOMEPAGE-
 
-![Homepage]
-(Assets/ScreenShots/HomePage.webp)
+![Homepage](Assets/ScreenShots/HomePage.webp)
 -PRODUCT PAGE-
 
 ![Productpage](Assets/ScreenShots/Product%20Page.webp)
@@ -111,8 +110,7 @@ Added hover effects and spacing improvements
 ![AboutUsPage](Assets/ScreenShots/About%20us%20page.webp)
 -REQUEST QUOTE PAGE-
 
-![QuotePage]
-(Assets/ScreenShots/Qoute.webp)
+![QuotePage](Assets/ScreenShots/Qoute.webp)
 -ENQUIRY PAGE-
 
 ![EnquirePage](Assets/ScreenShots/Enquire%20page.webp)
