@@ -56,15 +56,6 @@ Home│--Products │--About us │--Place an order │--Enquire
 HTML5 for Website structure
 CSS3  for Styling and responsiveness
 
---Website Preview
-
---Different Screen Views--
-![Mobile-View](Assets/ScreenShots/Mobile%20View.webp)
-
-![DeskTop-View](Assets/ScreenShots/Desktop%20View.webp)
-
-![Tablet-View](Assets/ScreenShots/Tablet%20View.webp)
-
 --Part 1 Details
 
 Included:
@@ -106,6 +97,38 @@ Added CSS styling
 Improved responsiveness
 Enhanced UI design
 Added hover effects and spacing improvements
+
+--Website Preview--
+-HOMEPAGE-
+
+![Homepage]
+(Assets/ScreenShots/HomePage.webp)
+-PRODUCT PAGE-
+
+![Productpage](Assets/ScreenShots/Product%20Page.webp)
+-ABOUT US PAGE-
+
+![AboutUsPage](Assets/ScreenShots/About%20us%20page.webp)
+-REQUEST QUOTE PAGE-
+
+![QuotePage]
+(Assets/ScreenShots/Qoute.webp)
+-ENQUIRY PAGE-
+
+![EnquirePage](Assets/ScreenShots/Enquire%20page.webp)
+
+
+
+--Different Screen Views--
+-MOBILE VIEW-
+
+![Mobile-View](Assets/ScreenShots/Mobile%20View.webp)
+-DESKTOP VIEW-
+
+![DeskTop-View](Assets/ScreenShots/Desktop%20View.webp)
+-TABLET VIEW-
+
+![Tablet-View](Assets/ScreenShots/Tablet%20View.webp)
 
 --References
 
