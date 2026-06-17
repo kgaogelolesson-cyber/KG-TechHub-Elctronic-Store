@@ -611,3 +611,5 @@ hr {
       .success-icon { font-size:1.5rem; color:#28a745; }
       .input-error { border:2px solid #dc3545 !important; }
       .field-error { color:#dc3545; font-size:0.85rem; display:block; margin-top:4px; }
+  .form-error-msg { background:#fff3cd; border:2px solid #ffc107; color:#856404; padding:14px 20px; border-radius:8px; margin-bottom:14px; font-size:0.98rem; }
+  button:disabled { cursor:not-allowed; }
