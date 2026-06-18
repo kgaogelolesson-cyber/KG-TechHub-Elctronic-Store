@@ -65,21 +65,21 @@ Home
 
 --File Structure
 KG-TechHub-Electronic-Store/
-├── index.html              # Homepage
-├── products.html           # Products page with lightbox
-├── about.html              # About Us page
-├── Quote.html              # Request a Quote page
-├── enquiry.html            # Enquiry page
-│
-├── Js/
-│   └── script.js           # All JavaScript (validation, lightbox, forms)
-│
-├── Css/
-│   └── style.css           # All styling
-│
-└── Assets/
-    ├── images/             # Product and logo images
-    └── ScreenShots/        # Website preview screenshots
+/-index.html
+/-products.html
+/-about.html
+/-Quote.html
+/-enquiry.html
+-
+/-Js/
+  /- script.js
+-
+/-Css/
+  /- style.css
+-
+/- Assets/
+    /- images/
+    /- ScreenShots/
 
 --Changelog
 
@@ -112,7 +112,7 @@ KG-TechHub-Electronic-Store/
 -Linked all forms to store email via mailto
 
 --6th Update
--Replaced "See Photo" links with a full **lightbox gallery** on the products page
+-Replaced "See Photo" links with a full lightbox gallery on the products page
 -Lightbox features: prev/next navigation arrows, thumbnail strip, image counter, keyboard support (← → Esc), zoom-in animation, click-outside-to-close
 -Product images now clickable to open lightbox directly
 
@@ -153,6 +153,14 @@ Demonstrates the JavaScript form validation response when a user enters an inval
 Shows the green success confirmation message displayed after a form is successfully submitted, replacing the form with feedback to the user.
 
 ![Form Success Message](Assets/ScreenShots/Submit%20sucess%20mnessage.webp)
+
+--Submit Button Loadingg effect
+Shows that the Form is being submitted
+
+![Button Efffect](Assets/ScreenShots/Button%20loading%20effect.png)
+
+--Form Submitted to my email
+![SubmittedForm](Assets/ScreenShots/Submiteed%20form.png)
 
 --About Us Page
 -Displays the About Us page with the store description, mission statement, and vision.
@@ -199,6 +207,7 @@ The website is designed to work on:
 -W3Schools. (2024). *HTML Tutorial*. Available at: https://www.w3schools.com
 -Duckett, J. (2011). *HTML and CSS: Design and Build Websites*. John Wiley & Sons.
 -Font Awesome. (2026). *Font Awesome Icons*. Available at: https://fontawesome.com/ (Accessed: 13 May 2026).
+-Formspree (n.d.) Form integration. Available at: https://formspree.io/forms/mwvjjlrz/integration (Accessed: 17 June 2026).
 
 --Future Improvements
 -Product search and filter feature

@@ -69,19 +69,23 @@ function collectFormData(form) {
   return lines.join("\n");
 }
 
-//AJAX Form Submission via mailto fallback//
+//Formspree Endpoints//
+const FORMSPREE_ENQUIRY = "https://formspree.io/f/mzdqqejg";
+const FORMSPREE_QUOTE   = "https://formspree.io/f/mwvjjlrz";
+
+//AJAX Submission//
 function submitFormAJAX(options) {
-  const { form, emailInputId, subject, successMessage, button } = options;
+  const { form, emailInputId, endpoint, successMessage, button } = options;
   const emailInput = document.getElementById(emailInputId);
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent default page reload (AJAX behaviour)
+    e.preventDefault(); // Stop default page reload
 
-    // Clear previous form-level errors
+    // Clear any previous form-level errors//
     const prevErr = form.parentElement.querySelector(".form-error-msg");
     if (prevErr) prevErr.remove();
 
-    //Validate email field
+    //Validate email
     const emailVal = emailInput.value.trim();
     if (!emailVal) {
       showError(emailInput, "Email address is required.");
@@ -91,29 +95,41 @@ function submitFormAJAX(options) {
       showError(emailInput, 'Please enter a valid email address (must include "@" and a domain e.g. name@example.com).');
       return;
     }
-
     clearError(emailInput);
 
-    //Show loading state (async UX feedback)
+    //Show loading state
     showLoading(button);
 
-    //Simulate async processing (mimics AJAX request delay)
-    setTimeout(function () {
-      try {
-        //Build mailto and open email client
-        const body = collectFormData(form);
-        const mailtoLink = `mailto:${STORE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink;
+    //Build form data object for Formspree
+    const formData = new FormData(form);
 
-        //Show success feedback to user
-        hideLoading(button);
+    //Send via fetch() — real AJAX request to Formspree
+    fetch(endpoint, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    })
+    .then(function (response) {
+      hideLoading(button);
+      if (response.ok) {
+        //Success — show confirmation, hide form
         showSuccessMessage(form, successMessage);
-      } catch (err) {
-        //Error handling — display user-friendly message
-        hideLoading(button);
-        showFormError(form, "Something went wrong. Please try again or contact us directly at " + STORE_EMAIL);
+        form.reset();
+      } else {
+        //Server error — parse and display message
+        return response.json().then(function (data) {
+          const msg = data.errors
+            ? data.errors.map(e => e.message).join(", ")
+            : "Submission failed. Please try again.";
+          showFormError(form, msg);
+        });
       }
-    }, 1200); // Simulated async delay
+    })
+    .catch(function () {
+      //Network error
+      hideLoading(button);
+      showFormError(form, "Network error. Please check your connection and try again.");
+    });
   });
 }
 
@@ -128,12 +144,12 @@ function initEnquiryForm() {
   submitFormAJAX({
     form,
     emailInputId: "enquiry-email",
-    subject: "New Customer Enquiry - KG's TechHub Electronics",
+    endpoint: FORMSPREE_ENQUIRY,
     successMessage: "Thank you! Your enquiry has been sent successfully. We'll get back to you shortly.",
     button
   });
 }
-//Quote form//
+//QUOTE FORM//
 function initQuoteForm() {
   const form = document.getElementById("quote-form");
   if (!form) return;
@@ -144,13 +160,12 @@ function initQuoteForm() {
   submitFormAJAX({
     form,
     emailInputId: "quote-email",
-    subject: "Quote Request - KG's TechHub Electronics",
+    endpoint: FORMSPREE_QUOTE,
     successMessage: "Thank you! Your quote request has been received. We'll send your quote via the details you provided.",
     button
   });
 }
-
-//Newsletterform //
+//NEWSLETTER FORM//
 function initNewsletterForm() {
   const form = document.getElementById("newsletter-form");
   if (!form) return;
@@ -168,21 +183,33 @@ function initNewsletterForm() {
     }
     clearError(emailInput);
     showLoading(button);
-    setTimeout(function () {
-      try {
-        const body = `New Newsletter Subscriber\nEmail: ${emailVal}`;
-        window.location.href = `mailto:${STORE_EMAIL}?subject=${encodeURIComponent("Newsletter Subscription - KG's TechHub")}&body=${encodeURIComponent(body)}`;
-        hideLoading(button);
+
+    //Send to enquiry endpoint (same inbox)
+    const formData = new FormData();
+    formData.append("email", emailVal);
+    formData.append("_subject", "New Newsletter Subscription - KG's TechHub");
+
+    fetch(FORMSPREE_ENQUIRY, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    })
+    .then(function (response) {
+      hideLoading(button);
+      if (response.ok) {
         showSuccessMessage(form, "You're subscribed! Thank you for joining the KG's TechHub newsletter.");
-      } catch (err) {
-        hideLoading(button);
-        showFormError(form, "Something went wrong. Please try again.");
+        form.reset();
+      } else {
+        showFormError(form, "Subscription failed. Please try again.");
       }
-    }, 1000);
+    })
+    .catch(function () {
+      hideLoading(button);
+      showFormError(form, "Network error. Please check your connection and try again.");
+    });
   });
 }
-
-//The lightbox//
+//LIGHTBOX//
 function initLightbox() {
   const overlay = document.getElementById("lightbox-overlay");
   if (!overlay) return;
@@ -255,7 +282,7 @@ function initLightbox() {
     if (e.key === "ArrowRight") goTo(currentIndex + 1);
   });
 }
-//For allforms//
+//For all forms//
 document.addEventListener("DOMContentLoaded", function () {
   initEnquiryForm();
   initQuoteForm();
